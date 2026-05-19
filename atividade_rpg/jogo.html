@@ -17,35 +17,35 @@
                 <!-- Status do Herói -->
                 <div class="col">
                     <ul class="list-group float-end text-center" style="width: 225px;">
-                        <li class="list-group-item">Gojo</li>
-                        <li class="list-group-item">Intocável</li>
+                        <li class="list-group-item"><strong id="nome-hero"></strong></li>
+                        <li id="titulo-hero" class="list-group-item"></li>
                         <li class="list-group-item">
                             ❤️
-                            <progress value="100" max="100" style="accent-color: red;"></progress>
+                            <progress id="hp-hero" value="100" max="100" style="accent-color: red;"></progress>
                         </li>
                         <li class="list-group-item">
                             🔴
-                            <progress value="100" max="100" style="accent-color: blue;"></progress>
+                            <progress id="mp-hero" value="100" max="100" style="accent-color: blue;"></progress>
                         </li>
                         <li class="list-group-item">
                             🔵
-                            <progress value="0" max="100" style="accent-color: purple;"></progress>
+                            <progress id="en-hero" value="0" max="100" style="accent-color: purple;"></progress>
                         </li>
                     </ul>
                 </div>
                 <!-- Status do Chefe -->
                 <div class="col">
                     <ul class="list-group float-start text-center" style="width: 225px;">
-                        <li class="list-group-item">Sukuna</li>
-                        <li class="list-group-item">Maldiçao</li>
+                        <li class="list-group-item"><strong id="nome-boss"></strong></li>
+                        <li id="titulo-boss" class="list-group-item"></li>
                         <li class="list-group-item">
                             ❤️
-                            <progress value="100" max="100" style="accent-color: red;"></progress>
+                            <progress id="hp-boss" value="100" max="100" style="accent-color: red;"></progress>
                         </li>
                         <li class="list-group-item">
                             ⚔️
-                            <progress value="0" max="100" style="accent-color: orange;"></progress>
-                        </li>
+                            <progress id="en-hero" value="0" max="100" style="accent-color: orange;"></progress>
+                        </li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
                     </ul>
                 </div>
             </div>
@@ -53,6 +53,7 @@
                 <!-- IMG HERO -->
                 <div class="col text-end">
                     <img src="assets/gojo.gif" width="250" height="300" />
+                    <div id="controles"></div>
                 </div>
                 <!-- IMG BOSS -->
                 <div class="col">
@@ -66,6 +67,7 @@
             </div>
         </div> <!-- fechamento do card -->
     </div> <!-- fechamento do container-->
+<script src="javascript.js"></script>
 </body>
 
 </html>
