@@ -65,6 +65,7 @@ listaHabilidades.forEach (hab => {
     containerBtn.appendChild(btn);
     btn.onclick = () => {
         hero.hero_atacar (boss, hab);
+        boss.boss_atacar (hero);
         atualizarTela ();
     }
 }) ;
@@ -72,4 +73,24 @@ const atualizarTela =() => {
     document.getElementById("hp-boss").value = boss.hp;
     document.getElementById("mp-hero").value = hero.mana;
     document.getElementById("en-hero").value = hero.energia
+
+    document.getElementById("hp-hero").value = hero.hp;
+    document.getElementById("en-boss").value = boss.energia
+
+    if(hero.hp <= 0){
+        game_over();
+    }
+    if(boss.hp <0){
+        vitoria();
+    }
+}
+async function game_over(){
+    const resposta = await fetch ('gameover.html');
+    const htmlContent = await resposta.text();
+    document.getElementById('tela').innerHTML = htmlContent;
+}
+async function vitoria(){
+    const resposta = await fetch ('vitoria.html');
+    const htmlContent = await resposta.text();
+    document.getElementById('tela').innerHTML = htmlContent;
 }
